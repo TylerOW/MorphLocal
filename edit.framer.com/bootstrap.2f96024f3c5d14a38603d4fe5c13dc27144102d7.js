@@ -21,20 +21,20 @@ const embedRegex = /^\/embed\/(?<prefix>(?:(?:[A-Za-z0-9]+-)*[A-Za-z0-9]+--)?)(?
 const embedMatch = location.pathname.match(embedRegex);
 const embedShareId = (_f = embedMatch === null || embedMatch === void 0 ? void 0 : embedMatch.groups) === null || _f === void 0 ? void 0 : _f.shareId;
 const embedFrameId = decode((_g = embedMatch === null || embedMatch === void 0 ? void 0 : embedMatch.groups) === null || _g === void 0 ? void 0 : _g.frameId);
-let canvas = "https://framercanvas.com";
+let canvas = "";
 if (projectId && hostInfo.scopeCanvas) {
     canvas = canvas.replace("//", `//project-${projectId.toLowerCase()}.`);
 }
 const bootstrap = {
     services: {
-        api: "https://api.framer.com",
-        app: "https://framer.com",
+        api: "",
+        app: "",
         canvas,
-        events: "https://events.framer.com",
-        login: "https://login.framer.com",
-        userContent: "https://framerusercontent.com",
-        modulesCDN: "https://framerusercontent.com/modules",
-        modulesShortLink: "https://framer.com/m",
+        events: "",
+        login: "",
+        userContent: "",
+        modulesCDN: "",
+        modulesShortLink: "",
         previewDomain: "framer.app",
     },
     hostInfo: {
